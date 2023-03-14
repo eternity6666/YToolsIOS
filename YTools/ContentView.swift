@@ -6,21 +6,73 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ScrollView {
+            VStack {
+                NavigationLink {
+                    NineMainView()
+                } label: {
+                    ContentItemView(title: "九格")
+                }
+                
+                NavigationLink {
+                    LazyView(SortMainView())
+                } label: {
+                    ContentItemView(title: "冒泡", color: Color.blue)
+                }
+                
+                NavigationLink {
+                    LazyView(Game2048View())
+                } label: {
+                    ContentItemView(title: "2048")
+                }
+                NavigationLink {
+                    LazyView(ColorDemoView())
+                } label: {
+                    ContentItemView(title: "Color Demo")
+                }
+            }
         }
         .padding()
+    }
+}
+
+struct LazyView<Content: View>: View {
+    let build: () -> Content
+    
+    init(_ build: @autoclosure @escaping () -> Content) {
+        self.build = build
+    }
+    
+    var body: Content {
+        build()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct ContentItemView: View {
+    let title: String
+    let color: Color
+    
+    init(title: String, color: Color = randomColor()) {
+        self.title = title
+        self.color = color
+    }
+    
+    var body: some View {
+        Text(title)
+            .foregroundColor(Color.white)
+            .font(.system(size: 20, design: .rounded))
+            .padding()
+            .frame(minWidth: 0, maxWidth: .infinity)
+            .background(RoundedRectangle(cornerRadius: 10).foregroundColor(color))
     }
 }

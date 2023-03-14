@@ -7,19 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CF031AB2946168E00F40D2B /* SortMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF031AA2946168E00F40D2B /* SortMainView.swift */; };
+		1CF031AD294616B800F40D2B /* SortPicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF031AC294616B800F40D2B /* SortPicView.swift */; };
+		A37DEF7229B98E9700A5606D /* Game2048View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DEF7129B98E9700A5606D /* Game2048View.swift */; };
+		A37DEF7429BAD4C800A5606D /* DemoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DEF7329BAD4C800A5606D /* DemoTest.swift */; };
+		A37DEF7A29BADF1700A5606D /* ClockMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DEF7929BADF1700A5606D /* ClockMainView.swift */; };
+		A37DEF7E29BEDE7A00A5606D /* ColorDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DEF7D29BEDE7900A5606D /* ColorDemoView.swift */; };
 		A3DF9075294092D300C14FF1 /* YToolsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF9074294092D300C14FF1 /* YToolsApp.swift */; };
 		A3DF9077294092D300C14FF1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF9076294092D300C14FF1 /* ContentView.swift */; };
 		A3DF9079294092D400C14FF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3DF9078294092D400C14FF1 /* Assets.xcassets */; };
 		A3DF907D294092D400C14FF1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3DF907C294092D400C14FF1 /* Preview Assets.xcassets */; };
+		A3DF908429420A6E00C14FF1 /* WeatherKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF908329420A6E00C14FF1 /* WeatherKitView.swift */; };
+		A3DF908829473E6F00C14FF1 /* NineMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF908729473E6F00C14FF1 /* NineMainView.swift */; };
+		A3DF908A29473ECE00C14FF1 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF908929473ECE00C14FF1 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1CF031AA2946168E00F40D2B /* SortMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortMainView.swift; sourceTree = "<group>"; };
+		1CF031AC294616B800F40D2B /* SortPicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortPicView.swift; sourceTree = "<group>"; };
+		A37DEF7129B98E9700A5606D /* Game2048View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game2048View.swift; sourceTree = "<group>"; };
+		A37DEF7329BAD4C800A5606D /* DemoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTest.swift; sourceTree = "<group>"; };
+		A37DEF7529BAD8E400A5606D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A37DEF7929BADF1700A5606D /* ClockMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockMainView.swift; sourceTree = "<group>"; };
+		A37DEF7D29BEDE7900A5606D /* ColorDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDemoView.swift; sourceTree = "<group>"; };
 		A3DF9071294092D300C14FF1 /* YTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DF9074294092D300C14FF1 /* YToolsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YToolsApp.swift; sourceTree = "<group>"; };
 		A3DF9076294092D300C14FF1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A3DF9078294092D400C14FF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3DF907A294092D400C14FF1 /* YTools.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YTools.entitlements; sourceTree = "<group>"; };
 		A3DF907C294092D400C14FF1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A3DF908329420A6E00C14FF1 /* WeatherKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherKitView.swift; sourceTree = "<group>"; };
+		A3DF908729473E6F00C14FF1 /* NineMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NineMainView.swift; sourceTree = "<group>"; };
+		A3DF908929473ECE00C14FF1 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +52,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1CF031A92946167200F40D2B /* sort */ = {
+			isa = PBXGroup;
+			children = (
+				1CF031AA2946168E00F40D2B /* SortMainView.swift */,
+				1CF031AC294616B800F40D2B /* SortPicView.swift */,
+			);
+			path = sort;
+			sourceTree = "<group>";
+		};
+		A37DEF7029B98E7600A5606D /* Game2048 */ = {
+			isa = PBXGroup;
+			children = (
+				A37DEF7129B98E9700A5606D /* Game2048View.swift */,
+			);
+			path = Game2048;
+			sourceTree = "<group>";
+		};
+		A37DEF7629BADECE00A5606D /* clock */ = {
+			isa = PBXGroup;
+			children = (
+				A37DEF7929BADF1700A5606D /* ClockMainView.swift */,
+			);
+			path = clock;
+			sourceTree = "<group>";
+		};
+		A37DEF7729BADEEA00A5606D /* game */ = {
+			isa = PBXGroup;
+			children = (
+				A37DEF7029B98E7600A5606D /* Game2048 */,
+			);
+			path = game;
+			sourceTree = "<group>";
+		};
+		A37DEF7829BADEF200A5606D /* application */ = {
+			isa = PBXGroup;
+			children = (
+				1CF031A92946167200F40D2B /* sort */,
+				A3DF908529473E4C00C14FF1 /* nine */,
+				A37DEF7629BADECE00A5606D /* clock */,
+			);
+			path = application;
+			sourceTree = "<group>";
+		};
+		A37DEF7B29BED4F400A5606D /* demo */ = {
+			isa = PBXGroup;
+			children = (
+				A37DEF7C29BED4FC00A5606D /* colorDemo */,
+			);
+			path = demo;
+			sourceTree = "<group>";
+		};
+		A37DEF7C29BED4FC00A5606D /* colorDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A37DEF7D29BEDE7900A5606D /* ColorDemoView.swift */,
+			);
+			path = colorDemo;
+			sourceTree = "<group>";
+		};
 		A3DF9068294092D200C14FF1 = {
 			isa = PBXGroup;
 			children = (
@@ -52,11 +130,18 @@
 		A3DF9073294092D300C14FF1 /* YTools */ = {
 			isa = PBXGroup;
 			children = (
+				A37DEF7B29BED4F400A5606D /* demo */,
+				A37DEF7829BADEF200A5606D /* application */,
+				A37DEF7729BADEEA00A5606D /* game */,
+				A37DEF7529BAD8E400A5606D /* Info.plist */,
+				A3DF908629473E5A00C14FF1 /* base */,
 				A3DF9074294092D300C14FF1 /* YToolsApp.swift */,
 				A3DF9076294092D300C14FF1 /* ContentView.swift */,
 				A3DF9078294092D400C14FF1 /* Assets.xcassets */,
 				A3DF907A294092D400C14FF1 /* YTools.entitlements */,
 				A3DF907B294092D400C14FF1 /* Preview Content */,
+				A3DF908329420A6E00C14FF1 /* WeatherKitView.swift */,
+				A37DEF7329BAD4C800A5606D /* DemoTest.swift */,
 			);
 			path = YTools;
 			sourceTree = "<group>";
@@ -67,6 +152,22 @@
 				A3DF907C294092D400C14FF1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A3DF908529473E4C00C14FF1 /* nine */ = {
+			isa = PBXGroup;
+			children = (
+				A3DF908729473E6F00C14FF1 /* NineMainView.swift */,
+			);
+			path = nine;
+			sourceTree = "<group>";
+		};
+		A3DF908629473E5A00C14FF1 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				A3DF908929473ECE00C14FF1 /* Utils.swift */,
+			);
+			path = base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,7 +198,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1410;
-				LastUpgradeCheck = 1410;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					A3DF9070294092D300C14FF1 = {
 						CreatedOnToolsVersion = 14.1;
@@ -139,7 +240,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3DF908429420A6E00C14FF1 /* WeatherKitView.swift in Sources */,
+				A37DEF7229B98E9700A5606D /* Game2048View.swift in Sources */,
+				1CF031AB2946168E00F40D2B /* SortMainView.swift in Sources */,
 				A3DF9077294092D300C14FF1 /* ContentView.swift in Sources */,
+				A37DEF7A29BADF1700A5606D /* ClockMainView.swift in Sources */,
+				A37DEF7E29BEDE7A00A5606D /* ColorDemoView.swift in Sources */,
+				A37DEF7429BAD4C800A5606D /* DemoTest.swift in Sources */,
+				A3DF908A29473ECE00C14FF1 /* Utils.swift in Sources */,
+				A3DF908829473E6F00C14FF1 /* NineMainView.swift in Sources */,
+				1CF031AD294616B800F40D2B /* SortPicView.swift in Sources */,
 				A3DF9075294092D300C14FF1 /* YToolsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,6 +261,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -180,6 +291,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -197,6 +309,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -209,6 +322,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -238,6 +352,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -249,6 +364,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -262,13 +378,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = YTools/YTools.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"YTools/Preview Content\"";
 				DEVELOPMENT_TEAM = YKULDT8YN9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YTools/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -288,6 +409,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -300,13 +423,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = YTools/YTools.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"YTools/Preview Content\"";
 				DEVELOPMENT_TEAM = YKULDT8YN9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YTools/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -326,6 +454,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
