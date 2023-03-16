@@ -31,12 +31,7 @@ struct SortPicView: View {
                             Text("\(showList[index])")
                                 .foregroundColor(Color.white)
                             HStack {}
-                                .frame(
-                                    minWidth: 0,
-                                    maxWidth: .infinity,
-                                    minHeight: 0,
-                                    maxHeight: .infinity
-                                )
+                                .fillMaxSize()
                         }
                         .border(borderShapeStyle(index), width: borderShapeWidth(index))
                         .frame(
@@ -46,7 +41,13 @@ struct SortPicView: View {
                             maxHeight: Self.itemHeight(geo, item: showList[index], list: showList)
                         )
                         .background(listColor[showList[index]])
-                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: Alignment.bottom)
+                        .frame(
+                            minWidth: 0,
+                            maxWidth: .infinity,
+                            minHeight: 0,
+                            maxHeight: .infinity,
+                            alignment: Alignment.bottom
+                        )
                     }
                 }
                 .padding(Self.calculateEdgeInsets(geo, list: showList))

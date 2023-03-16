@@ -35,7 +35,7 @@ struct NineMainView: View {
             }
             
         }
-        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+        .fillMaxSize()
         .background(Color.gray.opacity(0.15))
         .onReceive(pub, perform: { output in
             changeColorList()

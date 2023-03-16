@@ -53,7 +53,7 @@ struct Game2048View: View {
             }
             .frame(height: 50)
         }
-        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+        .fillMaxSize()
         .gesture(isDead == false ? buildDragGesture() : nil)
     }
     

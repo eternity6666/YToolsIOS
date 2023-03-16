@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1CF031AB2946168E00F40D2B /* SortMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF031AA2946168E00F40D2B /* SortMainView.swift */; };
 		1CF031AD294616B800F40D2B /* SortPicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF031AC294616B800F40D2B /* SortPicView.swift */; };
+		A352161F29C1997B0013DA70 /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A352161E29C1997B0013DA70 /* UIExtension.swift */; };
 		A37DEF7229B98E9700A5606D /* Game2048View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DEF7129B98E9700A5606D /* Game2048View.swift */; };
 		A37DEF7429BAD4C800A5606D /* DemoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DEF7329BAD4C800A5606D /* DemoTest.swift */; };
 		A37DEF7A29BADF1700A5606D /* ClockMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DEF7929BADF1700A5606D /* ClockMainView.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		1CF031AA2946168E00F40D2B /* SortMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortMainView.swift; sourceTree = "<group>"; };
 		1CF031AC294616B800F40D2B /* SortPicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortPicView.swift; sourceTree = "<group>"; };
+		A352161E29C1997B0013DA70 /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
 		A37DEF7129B98E9700A5606D /* Game2048View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game2048View.swift; sourceTree = "<group>"; };
 		A37DEF7329BAD4C800A5606D /* DemoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTest.swift; sourceTree = "<group>"; };
 		A37DEF7529BAD8E400A5606D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				A3DF908929473ECE00C14FF1 /* Utils.swift */,
+				A352161E29C1997B0013DA70 /* UIExtension.swift */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				A37DEF7A29BADF1700A5606D /* ClockMainView.swift in Sources */,
 				A37DEF7E29BEDE7A00A5606D /* ColorDemoView.swift in Sources */,
 				A37DEF7429BAD4C800A5606D /* DemoTest.swift in Sources */,
+				A352161F29C1997B0013DA70 /* UIExtension.swift in Sources */,
 				A3DF908A29473ECE00C14FF1 /* Utils.swift in Sources */,
 				A3DF908829473E6F00C14FF1 /* NineMainView.swift in Sources */,
 				1CF031AD294616B800F40D2B /* SortPicView.swift in Sources */,

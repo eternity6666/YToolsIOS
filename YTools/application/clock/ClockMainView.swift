@@ -14,18 +14,9 @@ struct ClockMainView: View {
             VStack {
                 ClockBoardView()
                     .frame(width: size * 0.9, height: size * 0.9)
-            }.frame(
-                minWidth: 0,
-                maxWidth: .infinity,
-                minHeight: 0,
-                maxHeight: .infinity
-            )
-        }.frame(
-            minWidth: 0,
-            maxWidth: .infinity,
-            minHeight: 0,
-            maxHeight: .infinity
-        )
+            }
+            .fillMaxSize()
+        }.fillMaxSize()
     }
 }
 
@@ -34,12 +25,7 @@ struct ClockBoardView: View {
         ZStack {
             buildClockFaceCanvas()
             buildClockNeedle()
-        }.frame(
-            minWidth: 0,
-            maxWidth: .infinity,
-            minHeight: 0,
-            maxHeight: .infinity
-        )
+        }.fillMaxSize()
     }
     
     private func buildClockFaceCanvas() -> some View {

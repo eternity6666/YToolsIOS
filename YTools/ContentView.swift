@@ -13,7 +13,7 @@ struct ContentView: View {
         ScrollView {
             VStack {
                 NavigationLink {
-                    NineMainView()
+                    LazyView(NineMainView())
                 } label: {
                     ContentItemView(title: "九格")
                 }
@@ -72,7 +72,7 @@ struct ContentItemView: View {
             .foregroundColor(Color.white)
             .font(.system(size: 20, design: .rounded))
             .padding()
-            .frame(minWidth: 0, maxWidth: .infinity)
+            .fillMaxWidth()
             .background(RoundedRectangle(cornerRadius: 10).foregroundColor(color))
     }
 }
