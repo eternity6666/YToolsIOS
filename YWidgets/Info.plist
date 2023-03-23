@@ -4,12 +4,10 @@
 <dict>
 	<key>NSSupportsLiveActivities</key>
 	<true/>
-	<key>UIApplicationSceneManifest</key>
+	<key>NSExtension</key>
 	<dict>
-		<key>UIApplicationSupportsMultipleScenes</key>
-		<true/>
-		<key>UISceneConfigurations</key>
-		<dict/>
+		<key>NSExtensionPointIdentifier</key>
+		<string>com.apple.widgetkit-extension</string>
 	</dict>
 </dict>
 </plist>

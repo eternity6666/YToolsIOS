@@ -14,6 +14,17 @@
 		A37DEF7429BAD4C800A5606D /* DemoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DEF7329BAD4C800A5606D /* DemoTest.swift */; };
 		A37DEF7A29BADF1700A5606D /* ClockMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DEF7929BADF1700A5606D /* ClockMainView.swift */; };
 		A37DEF7E29BEDE7A00A5606D /* ColorDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DEF7D29BEDE7900A5606D /* ColorDemoView.swift */; };
+		A37DEFA429CC7C3E00A5606D /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A37DEFA329CC7C3E00A5606D /* WidgetKit.framework */; };
+		A37DEFA629CC7C3E00A5606D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A37DEFA529CC7C3E00A5606D /* SwiftUI.framework */; };
+		A37DEFA929CC7C3E00A5606D /* YWidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DEFA829CC7C3E00A5606D /* YWidgetsBundle.swift */; };
+		A37DEFAB29CC7C3E00A5606D /* YWidgetsLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DEFAA29CC7C3E00A5606D /* YWidgetsLiveActivity.swift */; };
+		A37DEFAD29CC7C3E00A5606D /* YWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DEFAC29CC7C3E00A5606D /* YWidgets.swift */; };
+		A37DEFB029CC7C4000A5606D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A37DEFAF29CC7C4000A5606D /* Assets.xcassets */; };
+		A37DEFB229CC7C4000A5606D /* YWidgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = A37DEFAE29CC7C3E00A5606D /* YWidgets.intentdefinition */; };
+		A37DEFB329CC7C4000A5606D /* YWidgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = A37DEFAE29CC7C3E00A5606D /* YWidgets.intentdefinition */; };
+		A37DEFB629CC7C4000A5606D /* YWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A37DEFA129CC7C3E00A5606D /* YWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A37DEFBD29CC85D100A5606D /* YWidgetsAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DEFBC29CC85D100A5606D /* YWidgetsAttributes.swift */; };
+		A37DEFBE29CC85D100A5606D /* YWidgetsAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DEFBC29CC85D100A5606D /* YWidgetsAttributes.swift */; };
 		A3DF9075294092D300C14FF1 /* YToolsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF9074294092D300C14FF1 /* YToolsApp.swift */; };
 		A3DF9077294092D300C14FF1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF9076294092D300C14FF1 /* ContentView.swift */; };
 		A3DF9079294092D400C14FF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3DF9078294092D400C14FF1 /* Assets.xcassets */; };
@@ -22,6 +33,30 @@
 		A3DF908829473E6F00C14FF1 /* NineMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF908729473E6F00C14FF1 /* NineMainView.swift */; };
 		A3DF908A29473ECE00C14FF1 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF908929473ECE00C14FF1 /* Utils.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A37DEFB429CC7C4000A5606D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3DF9069294092D200C14FF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A37DEFA029CC7C3E00A5606D;
+			remoteInfo = YWidgetsExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A37DEFB729CC7C4000A5606D /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A37DEFB629CC7C4000A5606D /* YWidgetsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1CF031AA2946168E00F40D2B /* SortMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortMainView.swift; sourceTree = "<group>"; };
@@ -32,6 +67,17 @@
 		A37DEF7529BAD8E400A5606D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A37DEF7929BADF1700A5606D /* ClockMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockMainView.swift; sourceTree = "<group>"; };
 		A37DEF7D29BEDE7900A5606D /* ColorDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDemoView.swift; sourceTree = "<group>"; };
+		A37DEFA129CC7C3E00A5606D /* YWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = YWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A37DEFA329CC7C3E00A5606D /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		A37DEFA529CC7C3E00A5606D /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		A37DEFA829CC7C3E00A5606D /* YWidgetsBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YWidgetsBundle.swift; sourceTree = "<group>"; };
+		A37DEFAA29CC7C3E00A5606D /* YWidgetsLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YWidgetsLiveActivity.swift; sourceTree = "<group>"; };
+		A37DEFAC29CC7C3E00A5606D /* YWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YWidgets.swift; sourceTree = "<group>"; };
+		A37DEFAE29CC7C3E00A5606D /* YWidgets.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = YWidgets.intentdefinition; sourceTree = "<group>"; };
+		A37DEFAF29CC7C4000A5606D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A37DEFB129CC7C4000A5606D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A37DEFBC29CC85D100A5606D /* YWidgetsAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YWidgetsAttributes.swift; sourceTree = "<group>"; };
+		A37DEFBF29CC8B7300A5606D /* YWidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YWidgetsExtension.entitlements; sourceTree = "<group>"; };
 		A3DF9071294092D300C14FF1 /* YTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DF9074294092D300C14FF1 /* YToolsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YToolsApp.swift; sourceTree = "<group>"; };
 		A3DF9076294092D300C14FF1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +90,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A37DEF9E29CC7C3E00A5606D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A37DEFA629CC7C3E00A5606D /* SwiftUI.framework in Frameworks */,
+				A37DEFA429CC7C3E00A5606D /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A3DF906E294092D300C14FF1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -113,10 +168,36 @@
 			path = colorDemo;
 			sourceTree = "<group>";
 		};
+		A37DEFA229CC7C3E00A5606D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A37DEFA329CC7C3E00A5606D /* WidgetKit.framework */,
+				A37DEFA529CC7C3E00A5606D /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A37DEFA729CC7C3E00A5606D /* YWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				A37DEFBC29CC85D100A5606D /* YWidgetsAttributes.swift */,
+				A37DEFA829CC7C3E00A5606D /* YWidgetsBundle.swift */,
+				A37DEFAA29CC7C3E00A5606D /* YWidgetsLiveActivity.swift */,
+				A37DEFAC29CC7C3E00A5606D /* YWidgets.swift */,
+				A37DEFAE29CC7C3E00A5606D /* YWidgets.intentdefinition */,
+				A37DEFAF29CC7C4000A5606D /* Assets.xcassets */,
+				A37DEFB129CC7C4000A5606D /* Info.plist */,
+			);
+			path = YWidgets;
+			sourceTree = "<group>";
+		};
 		A3DF9068294092D200C14FF1 = {
 			isa = PBXGroup;
 			children = (
+				A37DEFBF29CC8B7300A5606D /* YWidgetsExtension.entitlements */,
 				A3DF9073294092D300C14FF1 /* YTools */,
+				A37DEFA729CC7C3E00A5606D /* YWidgets */,
+				A37DEFA229CC7C3E00A5606D /* Frameworks */,
 				A3DF9072294092D300C14FF1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				A3DF9071294092D300C14FF1 /* YTools.app */,
+				A37DEFA129CC7C3E00A5606D /* YWidgetsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,6 +258,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A37DEFA029CC7C3E00A5606D /* YWidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A37DEFBA29CC7C4000A5606D /* Build configuration list for PBXNativeTarget "YWidgetsExtension" */;
+			buildPhases = (
+				A37DEF9D29CC7C3E00A5606D /* Sources */,
+				A37DEF9E29CC7C3E00A5606D /* Frameworks */,
+				A37DEF9F29CC7C3E00A5606D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YWidgetsExtension;
+			productName = YWidgetsExtension;
+			productReference = A37DEFA129CC7C3E00A5606D /* YWidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		A3DF9070294092D300C14FF1 /* YTools */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3DF9080294092D400C14FF1 /* Build configuration list for PBXNativeTarget "YTools" */;
@@ -183,10 +282,12 @@
 				A3DF906D294092D300C14FF1 /* Sources */,
 				A3DF906E294092D300C14FF1 /* Frameworks */,
 				A3DF906F294092D300C14FF1 /* Resources */,
+				A37DEFB729CC7C4000A5606D /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A37DEFB529CC7C4000A5606D /* PBXTargetDependency */,
 			);
 			name = YTools;
 			productName = YTools;
@@ -200,9 +301,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1410;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					A37DEFA029CC7C3E00A5606D = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					A3DF9070294092D300C14FF1 = {
 						CreatedOnToolsVersion = 14.1;
 					};
@@ -222,11 +326,20 @@
 			projectRoot = "";
 			targets = (
 				A3DF9070294092D300C14FF1 /* YTools */,
+				A37DEFA029CC7C3E00A5606D /* YWidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A37DEF9F29CC7C3E00A5606D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A37DEFB029CC7C4000A5606D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A3DF906F294092D300C14FF1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -239,6 +352,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A37DEF9D29CC7C3E00A5606D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A37DEFAB29CC7C3E00A5606D /* YWidgetsLiveActivity.swift in Sources */,
+				A37DEFBE29CC85D100A5606D /* YWidgetsAttributes.swift in Sources */,
+				A37DEFAD29CC7C3E00A5606D /* YWidgets.swift in Sources */,
+				A37DEFB229CC7C4000A5606D /* YWidgets.intentdefinition in Sources */,
+				A37DEFA929CC7C3E00A5606D /* YWidgetsBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A3DF906D294092D300C14FF1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -251,8 +376,10 @@
 				A37DEF7E29BEDE7A00A5606D /* ColorDemoView.swift in Sources */,
 				A37DEF7429BAD4C800A5606D /* DemoTest.swift in Sources */,
 				A352161F29C1997B0013DA70 /* UIExtension.swift in Sources */,
+				A37DEFBD29CC85D100A5606D /* YWidgetsAttributes.swift in Sources */,
 				A3DF908A29473ECE00C14FF1 /* Utils.swift in Sources */,
 				A3DF908829473E6F00C14FF1 /* NineMainView.swift in Sources */,
+				A37DEFB329CC7C4000A5606D /* YWidgets.intentdefinition in Sources */,
 				1CF031AD294616B800F40D2B /* SortPicView.swift in Sources */,
 				A3DF9075294092D300C14FF1 /* YToolsApp.swift in Sources */,
 			);
@@ -260,7 +387,84 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A37DEFB529CC7C4000A5606D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A37DEFA029CC7C3E00A5606D /* YWidgetsExtension */;
+			targetProxy = A37DEFB429CC7C4000A5606D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		A37DEFB829CC7C4000A5606D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = YWidgetsExtension.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YKULDT8YN9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = YWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yzh.YTools.YWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A37DEFB929CC7C4000A5606D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = YWidgetsExtension.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YKULDT8YN9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = YWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yzh.YTools.YWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		A3DF907E294092D400C14FF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -379,6 +583,7 @@
 		A3DF9081294092D400C14FF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = YTools/YTools.entitlements;
@@ -424,6 +629,7 @@
 		A3DF9082294092D400C14FF1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = YTools/YTools.entitlements;
@@ -469,6 +675,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A37DEFBA29CC7C4000A5606D /* Build configuration list for PBXNativeTarget "YWidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A37DEFB829CC7C4000A5606D /* Debug */,
+				A37DEFB929CC7C4000A5606D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A3DF906C294092D200C14FF1 /* Build configuration list for PBXProject "YTools" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
