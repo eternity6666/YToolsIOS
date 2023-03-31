@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1CF031AB2946168E00F40D2B /* SortMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF031AA2946168E00F40D2B /* SortMainView.swift */; };
 		1CF031AD294616B800F40D2B /* SortPicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF031AC294616B800F40D2B /* SortPicView.swift */; };
+		A3181C8729D6834700437F4D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A3181C8629D6834700437F4D /* Alamofire */; };
+		A3181C8A29D68AA200437F4D /* FundMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3181C8929D68AA200437F4D /* FundMainView.swift */; };
 		A352161F29C1997B0013DA70 /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A352161E29C1997B0013DA70 /* UIExtension.swift */; };
 		A37DEF7229B98E9700A5606D /* Game2048View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DEF7129B98E9700A5606D /* Game2048View.swift */; };
 		A37DEF7429BAD4C800A5606D /* DemoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DEF7329BAD4C800A5606D /* DemoTest.swift */; };
@@ -25,6 +27,8 @@
 		A37DEFB629CC7C4000A5606D /* YWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A37DEFA129CC7C3E00A5606D /* YWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A37DEFBD29CC85D100A5606D /* YWidgetsAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DEFBC29CC85D100A5606D /* YWidgetsAttributes.swift */; };
 		A37DEFBE29CC85D100A5606D /* YWidgetsAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DEFBC29CC85D100A5606D /* YWidgetsAttributes.swift */; };
+		A3C8A96629D6CE3700AA3877 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = A3C8A96529D6CE3700AA3877 /* SwiftUICharts */; };
+		A3C8A96929D6D55800AA3877 /* FundResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C8A96829D6D55800AA3877 /* FundResponse.swift */; };
 		A3DF9075294092D300C14FF1 /* YToolsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF9074294092D300C14FF1 /* YToolsApp.swift */; };
 		A3DF9077294092D300C14FF1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF9076294092D300C14FF1 /* ContentView.swift */; };
 		A3DF9079294092D400C14FF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3DF9078294092D400C14FF1 /* Assets.xcassets */; };
@@ -61,6 +65,7 @@
 /* Begin PBXFileReference section */
 		1CF031AA2946168E00F40D2B /* SortMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortMainView.swift; sourceTree = "<group>"; };
 		1CF031AC294616B800F40D2B /* SortPicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortPicView.swift; sourceTree = "<group>"; };
+		A3181C8929D68AA200437F4D /* FundMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundMainView.swift; sourceTree = "<group>"; };
 		A352161E29C1997B0013DA70 /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
 		A37DEF7129B98E9700A5606D /* Game2048View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game2048View.swift; sourceTree = "<group>"; };
 		A37DEF7329BAD4C800A5606D /* DemoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTest.swift; sourceTree = "<group>"; };
@@ -78,6 +83,7 @@
 		A37DEFB129CC7C4000A5606D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A37DEFBC29CC85D100A5606D /* YWidgetsAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YWidgetsAttributes.swift; sourceTree = "<group>"; };
 		A37DEFBF29CC8B7300A5606D /* YWidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YWidgetsExtension.entitlements; sourceTree = "<group>"; };
+		A3C8A96829D6D55800AA3877 /* FundResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundResponse.swift; sourceTree = "<group>"; };
 		A3DF9071294092D300C14FF1 /* YTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DF9074294092D300C14FF1 /* YToolsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YToolsApp.swift; sourceTree = "<group>"; };
 		A3DF9076294092D300C14FF1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -103,6 +109,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3181C8729D6834700437F4D /* Alamofire in Frameworks */,
+				A3C8A96629D6CE3700AA3877 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +124,15 @@
 				1CF031AC294616B800F40D2B /* SortPicView.swift */,
 			);
 			path = sort;
+			sourceTree = "<group>";
+		};
+		A3181C8829D68A8800437F4D /* fund */ = {
+			isa = PBXGroup;
+			children = (
+				A3C8A96729D6D54C00AA3877 /* data */,
+				A3181C8929D68AA200437F4D /* FundMainView.swift */,
+			);
+			path = fund;
 			sourceTree = "<group>";
 		};
 		A37DEF7029B98E7600A5606D /* Game2048 */ = {
@@ -145,6 +162,7 @@
 		A37DEF7829BADEF200A5606D /* application */ = {
 			isa = PBXGroup;
 			children = (
+				A3181C8829D68A8800437F4D /* fund */,
 				1CF031A92946167200F40D2B /* sort */,
 				A3DF908529473E4C00C14FF1 /* nine */,
 				A37DEF7629BADECE00A5606D /* clock */,
@@ -189,6 +207,14 @@
 				A37DEFB129CC7C4000A5606D /* Info.plist */,
 			);
 			path = YWidgets;
+			sourceTree = "<group>";
+		};
+		A3C8A96729D6D54C00AA3877 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				A3C8A96829D6D55800AA3877 /* FundResponse.swift */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 		A3DF9068294092D200C14FF1 = {
@@ -290,6 +316,10 @@
 				A37DEFB529CC7C4000A5606D /* PBXTargetDependency */,
 			);
 			name = YTools;
+			packageProductDependencies = (
+				A3181C8629D6834700437F4D /* Alamofire */,
+				A3C8A96529D6CE3700AA3877 /* SwiftUICharts */,
+			);
 			productName = YTools;
 			productReference = A3DF9071294092D300C14FF1 /* YTools.app */;
 			productType = "com.apple.product-type.application";
@@ -321,6 +351,10 @@
 				Base,
 			);
 			mainGroup = A3DF9068294092D200C14FF1;
+			packageReferences = (
+				A3181C8529D6834700437F4D /* XCRemoteSwiftPackageReference "Alamofire" */,
+				A3C8A96429D6CE3700AA3877 /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = A3DF9072294092D300C14FF1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -373,9 +407,11 @@
 				1CF031AB2946168E00F40D2B /* SortMainView.swift in Sources */,
 				A3DF9077294092D300C14FF1 /* ContentView.swift in Sources */,
 				A37DEF7A29BADF1700A5606D /* ClockMainView.swift in Sources */,
+				A3181C8A29D68AA200437F4D /* FundMainView.swift in Sources */,
 				A37DEF7E29BEDE7A00A5606D /* ColorDemoView.swift in Sources */,
 				A37DEF7429BAD4C800A5606D /* DemoTest.swift in Sources */,
 				A352161F29C1997B0013DA70 /* UIExtension.swift in Sources */,
+				A3C8A96929D6D55800AA3877 /* FundResponse.swift in Sources */,
 				A37DEFBD29CC85D100A5606D /* YWidgetsAttributes.swift in Sources */,
 				A3DF908A29473ECE00C14FF1 /* Utils.swift in Sources */,
 				A3DF908829473E6F00C14FF1 /* NineMainView.swift in Sources */,
@@ -703,6 +739,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A3181C8529D6834700437F4D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		A3C8A96429D6CE3700AA3877 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A3181C8629D6834700437F4D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3181C8529D6834700437F4D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		A3C8A96529D6CE3700AA3877 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3C8A96429D6CE3700AA3877 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A3DF9069294092D200C14FF1 /* Project object */;
 }

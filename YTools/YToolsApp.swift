@@ -29,7 +29,7 @@ struct YToolsApp: App {
         let state = YWidgetsAttributes.ContentState(value: 20)
         
         do {
-            let deliveryActivity = try Activity<YWidgetsAttributes>.request(
+            _ = try Activity<YWidgetsAttributes>.request(
                 attributes: data,
                 contentState: state,
                 pushType: nil

@@ -29,10 +29,17 @@ struct ContentView: View {
                 } label: {
                     ContentItemView(title: "2048")
                 }
+                
                 NavigationLink {
                     LazyView(ColorDemoView())
                 } label: {
                     ContentItemView(title: "Color Demo")
+                }
+                
+                NavigationLink {
+                    LazyView(FundMainView())
+                } label: {
+                    ContentItemView(title: "Fund")
                 }
             }
         }
