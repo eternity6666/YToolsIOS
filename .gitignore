@@ -122,3 +122,6 @@ Dependencies/
 
 
 # End of https://www.toptal.com/developers/gitignore/api/objective-c,swift
+
+# idea
+.idea

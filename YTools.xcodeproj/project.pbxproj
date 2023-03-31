@@ -27,6 +27,10 @@
 		A37DEFB629CC7C4000A5606D /* YWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A37DEFA129CC7C3E00A5606D /* YWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A37DEFBD29CC85D100A5606D /* YWidgetsAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DEFBC29CC85D100A5606D /* YWidgetsAttributes.swift */; };
 		A37DEFBE29CC85D100A5606D /* YWidgetsAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DEFBC29CC85D100A5606D /* YWidgetsAttributes.swift */; };
+		A3D2382729CD7DDB00A521B4 /* ClockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D2382629CD7DDB00A521B4 /* ClockData.swift */; };
+		A3D2382829CD7DDB00A521B4 /* ClockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D2382629CD7DDB00A521B4 /* ClockData.swift */; };
+		A3D2382A29CD7DF400A521B4 /* ClockBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D2382929CD7DF400A521B4 /* ClockBoardView.swift */; };
+		A3D2382B29CD7DF400A521B4 /* ClockBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D2382929CD7DF400A521B4 /* ClockBoardView.swift */; };
 		A3C8A96629D6CE3700AA3877 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = A3C8A96529D6CE3700AA3877 /* SwiftUICharts */; };
 		A3C8A96929D6D55800AA3877 /* FundResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C8A96829D6D55800AA3877 /* FundResponse.swift */; };
 		A3DF9075294092D300C14FF1 /* YToolsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF9074294092D300C14FF1 /* YToolsApp.swift */; };
@@ -83,6 +87,8 @@
 		A37DEFB129CC7C4000A5606D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A37DEFBC29CC85D100A5606D /* YWidgetsAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YWidgetsAttributes.swift; sourceTree = "<group>"; };
 		A37DEFBF29CC8B7300A5606D /* YWidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YWidgetsExtension.entitlements; sourceTree = "<group>"; };
+		A3D2382629CD7DDB00A521B4 /* ClockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClockData.swift; path = ../../../../../iOS/YTools/YTools/application/clock/ClockData.swift; sourceTree = "<group>"; };
+		A3D2382929CD7DF400A521B4 /* ClockBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClockBoardView.swift; path = ../../../../../iOS/YTools/YTools/application/clock/ClockBoardView.swift; sourceTree = "<group>"; };
 		A3C8A96829D6D55800AA3877 /* FundResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundResponse.swift; sourceTree = "<group>"; };
 		A3DF9071294092D300C14FF1 /* YTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DF9074294092D300C14FF1 /* YToolsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YToolsApp.swift; sourceTree = "<group>"; };
@@ -147,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				A37DEF7929BADF1700A5606D /* ClockMainView.swift */,
+				A3D2382629CD7DDB00A521B4 /* ClockData.swift */,
+				A3D2382929CD7DF400A521B4 /* ClockBoardView.swift */,
 			);
 			path = clock;
 			sourceTree = "<group>";
@@ -390,11 +398,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3D2382829CD7DDB00A521B4 /* ClockData.swift in Sources */,
 				A37DEFAB29CC7C3E00A5606D /* YWidgetsLiveActivity.swift in Sources */,
 				A37DEFBE29CC85D100A5606D /* YWidgetsAttributes.swift in Sources */,
 				A37DEFAD29CC7C3E00A5606D /* YWidgets.swift in Sources */,
 				A37DEFB229CC7C4000A5606D /* YWidgets.intentdefinition in Sources */,
 				A37DEFA929CC7C3E00A5606D /* YWidgetsBundle.swift in Sources */,
+				A3D2382B29CD7DF400A521B4 /* ClockBoardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,10 +423,12 @@
 				A352161F29C1997B0013DA70 /* UIExtension.swift in Sources */,
 				A3C8A96929D6D55800AA3877 /* FundResponse.swift in Sources */,
 				A37DEFBD29CC85D100A5606D /* YWidgetsAttributes.swift in Sources */,
+				A3D2382729CD7DDB00A521B4 /* ClockData.swift in Sources */,
 				A3DF908A29473ECE00C14FF1 /* Utils.swift in Sources */,
 				A3DF908829473E6F00C14FF1 /* NineMainView.swift in Sources */,
 				A37DEFB329CC7C4000A5606D /* YWidgets.intentdefinition in Sources */,
 				1CF031AD294616B800F40D2B /* SortPicView.swift in Sources */,
+				A3D2382A29CD7DF400A521B4 /* ClockBoardView.swift in Sources */,
 				A3DF9075294092D300C14FF1 /* YToolsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

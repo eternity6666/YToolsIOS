@@ -29,13 +29,17 @@ struct ContentView: View {
                 } label: {
                     ContentItemView(title: "2048")
                 }
-                
                 NavigationLink {
                     LazyView(ColorDemoView())
                 } label: {
                     ContentItemView(title: "Color Demo")
                 }
-                
+                NavigationLink {
+                    LazyView(ClockMainView())
+                } label: {
+                    ContentItemView(title: "自定义时钟")
+                }
+
                 NavigationLink {
                     LazyView(FundMainView())
                 } label: {

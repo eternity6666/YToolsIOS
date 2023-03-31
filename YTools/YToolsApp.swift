@@ -12,12 +12,6 @@ import ActivityKit
 struct YToolsApp: App {
     var body: some Scene {
         WindowGroup {
-            Button {
-                startWidget()
-            } label: {
-                Text("start Live Activity")
-            }
-
             NavigationView {
                 ContentView()
             }
