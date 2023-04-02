@@ -17,13 +17,11 @@ struct ContentView: View {
                 } label: {
                     ContentItemView(title: "九格")
                 }
-                
                 NavigationLink {
                     LazyView(SortMainView())
                 } label: {
                     ContentItemView(title: "冒泡", color: Color.blue)
                 }
-                
                 NavigationLink {
                     LazyView(Game2048View())
                 } label: {
@@ -39,7 +37,6 @@ struct ContentView: View {
                 } label: {
                     ContentItemView(title: "自定义时钟")
                 }
-
                 NavigationLink {
                     LazyView(FundMainView())
                 } label: {

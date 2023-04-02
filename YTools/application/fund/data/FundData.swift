@@ -10,11 +10,37 @@ import Foundation
 struct FundResponse<DATA>: Codable where DATA: Codable {
     let code: Int
     let message: String
-    let traceId: String
     let data: [DATA]
 }
 
-struct FundData: Codable {
+/**
+ * 基金信息
+ */
+struct FundSimpleData: Codable {
+    let code: String
+    // 拼音首字母缩写
+    let pinyinNameInitials: String
+    let name: String
+    let pinyinName: String
+    let type: String
+    
+    init(dataList: [String]) {
+        self.code = dataList[safe: 0] ?? ""
+        self.pinyinNameInitials = dataList[safe: 1] ?? ""
+        self.name = dataList[safe: 2] ?? ""
+        self.type = dataList[safe: 3] ?? ""
+        self.pinyinName = dataList[safe: 4] ?? ""
+    }
+    
+    func isValid() -> Bool {
+        return !self.code.isEmpty && !self.name.isEmpty
+    }
+}
+
+/**
+ * 基金明细
+ */
+struct FundDetailData: Codable {
     let code: String
     let name: String
     let type: String
@@ -35,8 +61,8 @@ struct FundData: Codable {
     let fundScale: String
     let netWorthDate: String
     let expectWorthDate: String
-    let netWorthData: [[String]]
-    let totalNetWorthData: [[String]]
+    let netWorthData: [[String?]]
+    let totalNetWorthData: [[String?]]
     
     init(
         code: String = "",
