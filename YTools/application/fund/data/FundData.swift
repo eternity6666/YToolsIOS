@@ -61,8 +61,8 @@ struct FundDetailData: Codable {
     let fundScale: String
     let netWorthDate: String
     let expectWorthDate: String
-    let netWorthData: [[String?]]
-    let totalNetWorthData: [[String?]]
+    let netWorthData: [[String]]
+    let totalNetWorthData: [[String]]
     
     init(
         code: String = "",
@@ -110,5 +110,31 @@ struct FundDetailData: Codable {
         self.expectWorthDate = expectWorthDate
         self.netWorthData = netWorthData
         self.totalNetWorthData = totalNetWorthData
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.code = try container.decodeIfPresent(String.self, forKey: .code) ?? ""
+        self.name = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
+        self.type = try container.decodeIfPresent(String.self, forKey: .type) ?? ""
+        self.netWorth = try container.decodeIfPresent(Double.self, forKey: .netWorth) ?? 0.0
+        self.expectWorth = try container.decodeIfPresent(Double.self, forKey: .expectWorth) ?? 0.0
+        self.totalWorth = try container.decodeIfPresent(Double.self, forKey: .totalWorth) ?? 0.0
+        self.expectGrowth = try container.decodeIfPresent(String.self, forKey: .expectGrowth) ?? ""
+        self.dayGrowth = try container.decodeIfPresent(String.self, forKey: .dayGrowth) ?? ""
+        self.lastWeekGrowth = try container.decodeIfPresent(String.self, forKey: .lastWeekGrowth) ?? ""
+        self.lastMonthGrowth = try container.decodeIfPresent(String.self, forKey: .lastMonthGrowth) ?? ""
+        self.lastThreeMonthsGrowth = try container.decodeIfPresent(String.self, forKey: .lastThreeMonthsGrowth) ?? ""
+        self.lastSixMonthsGrowth = try container.decodeIfPresent(String.self, forKey: .lastSixMonthsGrowth) ?? ""
+        self.lastYearGrowth = try container.decodeIfPresent(String.self, forKey: .lastYearGrowth) ?? ""
+        self.buyMin = try container.decodeIfPresent(String.self, forKey: .buyMin) ?? ""
+        self.buySourceRate = try container.decodeIfPresent(String.self, forKey: .buySourceRate) ?? ""
+        self.buyRate = try container.decodeIfPresent(String.self, forKey: .buyRate) ?? ""
+        self.manager = try container.decodeIfPresent(String.self, forKey: .manager) ?? ""
+        self.fundScale = try container.decodeIfPresent(String.self, forKey: .fundScale) ?? ""
+        self.netWorthDate = try container.decodeIfPresent(String.self, forKey: .netWorthDate) ?? ""
+        self.expectWorthDate = try container.decodeIfPresent(String.self, forKey: .expectWorthDate) ?? ""
+        self.netWorthData = try container.decodeIfPresent([[String]].self, forKey: .netWorthData) ?? [[String]]()
+        self.totalNetWorthData = try container.decodeIfPresent([[String]].self, forKey: .totalNetWorthData) ?? [[String]]()
     }
 }
