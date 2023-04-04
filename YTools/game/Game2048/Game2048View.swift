@@ -82,7 +82,7 @@ struct Game2048View: View {
         return VStack {
             ForEach(data.indices, id:\.self) { i in
                 HStack {
-                    ForEach($data[i].indices, id: \.self) { j in
+                    ForEach(data[i].indices, id: \.self) { j in
                         buildChess(i: i, j: j)
                     }
                 }

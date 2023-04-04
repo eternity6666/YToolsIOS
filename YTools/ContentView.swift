@@ -27,6 +27,11 @@ struct ContentView: View {
                 } label: {
                     ContentItemView(title: "2048")
                 }
+                NavigationLink {
+                    LazyView(FundMainView())
+                } label: {
+                    ContentItemView(title: "Fund")
+                }
                 if #available(iOS 15.0, *) {
                     NavigationLink {
                         LazyView(ColorDemoView())
@@ -38,11 +43,6 @@ struct ContentView: View {
                     } label: {
                         ContentItemView(title: "自定义时钟")
                     }
-                }
-                NavigationLink {
-                    LazyView(FundMainView())
-                } label: {
-                    ContentItemView(title: "Fund")
                 }
             }
             .padding()
