@@ -27,12 +27,12 @@ struct ContentView: View {
                 } label: {
                     ContentItemView(title: "2048")
                 }
-                NavigationLink {
-                    LazyView(ColorDemoView())
-                } label: {
-                    ContentItemView(title: "Color Demo")
-                }
-                if #available(iOS 16.1, *) {
+                if #available(iOS 15.0, *) {
+                    NavigationLink {
+                        LazyView(ColorDemoView())
+                    } label: {
+                        ContentItemView(title: "Color Demo")
+                    }
                     NavigationLink {
                         LazyView(ClockMainView())
                     } label: {
@@ -84,7 +84,7 @@ struct ContentItemView: View {
             .fillMaxWidth()
             .background(
                 RoundedRectangle(cornerRadius: 16.0, style: .continuous)
-                    .foregroundColor(Color(uiColor: .systemBackground))
+                    .foregroundColor(Color.systemBackground)
                     .shadow(radius: 1)
             )
     }

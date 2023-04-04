@@ -31,7 +31,7 @@ struct FundMainItemView: View {
         .padding()
         .background(
             RoundedRectangle(cornerRadius: 16.0, style: .continuous)
-                .foregroundColor(Color(uiColor: .systemBackground))
+                .foregroundColor(Color.systemBackground)
                 .shadow(radius: 1)
         )
         .sheet(isPresented: $showDetail, content: {

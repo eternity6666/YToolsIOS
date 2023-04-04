@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(iOS 15.0, *)
 struct ClockBoardView: View {
     @Binding var time: ClockData
     var body: some View {

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(iOS 15.0, *)
 struct ColorDemoView: View {
     @State private var green: Int = 0
     var body: some View {
@@ -130,6 +131,7 @@ struct ColorDemoView: View {
     }
 }
 
+@available(iOS 15.0, *)
 struct ColorDemoView_Previews: PreviewProvider {
     static var previews: some View {
         ColorDemoView()

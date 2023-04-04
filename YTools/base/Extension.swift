@@ -22,6 +22,16 @@ extension View {
     }
 }
 
+extension Color {
+    static var systemBackground: Color {
+        if #available(iOS 15.0, *) {
+            return Color(UIColor.systemBackground)
+        } else {
+            return Color.gray
+        }
+    }
+}
+
 extension Array {
     subscript (safe index: Int) -> Element? {
         guard index >= 0 && index < self.count else {
