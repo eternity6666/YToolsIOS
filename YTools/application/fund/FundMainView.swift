@@ -11,7 +11,7 @@ import Alamofire
 struct FundMainView: View {
     @State private var allFundDataList: [FundSimpleData] = []
     @State private var currentShowFundDataList: [FundSimpleData] = []
-    @State private var filterItemsList: [String: [FundSimpleData]] = [:]
+    @State private var filterItemsList: [String: Bool] = [:]
     
     @State private var showSearchBtn = false
     @State private var showFilterItemsList = false
@@ -34,17 +34,41 @@ struct FundMainView: View {
             }
         }
         .padding(EdgeInsets(top: 0, leading: 16.0, bottom: 0, trailing: 16.0))
-        .sheet(isPresented: $showFilterItemsList, onDismiss: {
-            
-        }, content: {
-            ScrollView {
-                LazyVStack {
-                    ForEach(filterItemsList.sorted { $0.key < $1.key}.indices, id: \.self) { index in
-                        Text("\((filterItemsList.sorted { $0.key < $1.key})[index].key)")
+        .sheet(
+            isPresented: $showFilterItemsList,
+            onDismiss: {
+                currentShowFundDataList = []
+                allFundDataList.forEach { data in
+                    if (filterItemsList[data.type] == true) {
+                        currentShowFundDataList.append(data)
                     }
                 }
+            },
+            content: {
+                let keyList = filterItemsList.map { $0.key }
+                VStack {
+                    Text("基金类型")
+                        .font(.caption)
+                    ScrollView {
+                        LazyVStack {
+                            ForEach(keyList.indices, id: \.self) { index in
+                                let key = keyList[index]
+                                HStack {
+                                    Image(systemName: filterItemsList[key] == true ? "checkmark.circle" : "circle")
+                                    Text(key)
+                                    Spacer()
+                                }
+                                .padding()
+                                .onTapGesture {
+                                    filterItemsList[key]?.toggle()
+                                }
+                            }
+                        }
+                    }
+                }
+                .padding(EdgeInsets(top: 0, leading: 16.0, bottom: 0, trailing: 16.0))
             }
-        })
+        )
         .toolbar {
             if (!allFundDataList.isEmpty) {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -79,9 +103,10 @@ struct FundMainView: View {
                         fundSimpleData.isValid()
                     })
                     currentShowFundDataList = allFundDataList
-                    filterItemsList = Dictionary(grouping: allFundDataList, by: { simpleFundData in
-                        simpleFundData.type
-                    })
+                    filterItemsList = [:]
+                    allFundDataList.forEach { data in
+                        filterItemsList[data.type] = true
+                    }
                 case .failure(let error):
                     debugPrint(error)
                 }
