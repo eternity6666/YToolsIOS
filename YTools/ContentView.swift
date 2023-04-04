@@ -32,10 +32,12 @@ struct ContentView: View {
                 } label: {
                     ContentItemView(title: "Color Demo")
                 }
-                NavigationLink {
-                    LazyView(ClockMainView())
-                } label: {
-                    ContentItemView(title: "自定义时钟")
+                if #available(iOS 16.1, *) {
+                    NavigationLink {
+                        LazyView(ClockMainView())
+                    } label: {
+                        ContentItemView(title: "自定义时钟")
+                    }
                 }
                 NavigationLink {
                     LazyView(FundMainView())
@@ -43,8 +45,8 @@ struct ContentView: View {
                     ContentItemView(title: "Fund")
                 }
             }
+            .padding()
         }
-        .padding()
     }
 }
 
@@ -77,10 +79,13 @@ struct ContentItemView: View {
     
     var body: some View {
         Text(title)
-            .foregroundColor(Color.white)
             .font(.system(size: 20, design: .rounded))
             .padding()
             .fillMaxWidth()
-            .background(RoundedRectangle(cornerRadius: 10).foregroundColor(color))
+            .background(
+                RoundedRectangle(cornerRadius: 16.0, style: .continuous)
+                    .foregroundColor(Color(uiColor: .systemBackground))
+                    .shadow(radius: 1)
+            )
     }
 }

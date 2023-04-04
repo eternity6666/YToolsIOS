@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(iOS 15, *)
 struct ClockMainView: View {
     @State var time = ClockData(time: .now)
     var body: some View {
@@ -28,6 +29,9 @@ struct ClockMainView: View {
 
 struct ClockMainView_Previews: PreviewProvider {
     static var previews: some View {
-        ClockMainView()
+        if #available(iOS 15, *) {
+            ClockMainView()
+        } else {
+        }
     }
 }

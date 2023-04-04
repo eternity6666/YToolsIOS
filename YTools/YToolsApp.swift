@@ -23,12 +23,16 @@ struct YToolsApp: App {
         let state = YWidgetsAttributes.ContentState(value: 20)
         
         do {
-            _ = try Activity<YWidgetsAttributes>.request(
-                attributes: data,
-                contentState: state,
-                pushType: nil
-            )
-            print("try request Live Activity")
+            if #available(iOS 16.1, *) {
+                _ = try Activity<YWidgetsAttributes>.request(
+                    attributes: data,
+                    contentState: state,
+                    pushType: nil
+                )
+                print("try request Live Activity")
+            } else {
+                debugPrint("当前系统版本不支持")
+            }
         } catch (let error) {
             print("\(error.localizedDescription)")
         }

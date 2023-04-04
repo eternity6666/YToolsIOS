@@ -30,31 +30,29 @@ struct FundMainView: View {
                             FundMainItemView(fundSimpleData: fundSimpleData)
                         }
                     }
+                    .padding()
                 }
             }
         }
-        .padding(EdgeInsets(top: 0, leading: 16.0, bottom: 0, trailing: 16.0))
         .sheet(
             isPresented: $showFilterItemsList,
             onDismiss: onFilterItemPageDismiss,
             content: createFilterItemPage
         )
         .toolbar {
-            if (!allFundDataList.isEmpty) {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        showFilterItemsList.toggle()
-                    } label: {
-                        Image(systemName: "list.bullet")
-                    }
-                }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        showSearchBtn.toggle()
-                    } label: {
-                        Image(systemName: "magnifyingglass")
-                    }
-                }
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    showFilterItemsList.toggle()
+                } label: {
+                    Image(systemName: "list.bullet")
+                }.disabled(allFundDataList.isEmpty)
+            }
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    showSearchBtn.toggle()
+                } label: {
+                    Image(systemName: "magnifyingglass")
+                }.disabled(allFundDataList.isEmpty)
             }
         }
         .onAppear {
@@ -65,11 +63,27 @@ struct FundMainView: View {
     private func createFilterItemPage() -> some View {
         let keyList = filterItemsList.map { $0.key }
         return VStack {
-            HStack {
-                Text("基金类型")
-                    .font(.title)
-                
+            let isAllSelected = filterItemsList.allSatisfy { $1 }
+            let isAllUnSelected = filterItemsList.allSatisfy { !$1}
+            ZStack {
+                HStack {
+                    Text("基金类型")
+                        .font(.title2)
+                }
+                HStack {
+                    Spacer()
+                    Button {
+                        keyList.forEach { key in
+                            filterItemsList[key] = !isAllSelected
+                        }
+                    } label: {
+                        Image(
+                            systemName: isAllSelected ? "checklist.checked" : (isAllUnSelected ? "checklist.unchecked" : "checklist")
+                        )
+                    }
+                }
             }
+            .padding([.horizontal, .top], 16)
             ScrollView {
                 LazyVStack {
                     ForEach(keyList.indices, id: \.self) { index in
@@ -80,18 +94,19 @@ struct FundMainView: View {
                             Spacer()
                         }
                         .padding()
-                        .border(.orange)
                         .background(
-                            RoundedRectangle(cornerRadius: 16.0, style: .continuous).foregroundColor(Color(uiColor: .systemBackground))
+                            RoundedRectangle(cornerRadius: 16.0, style: .continuous)
+                                .foregroundColor(Color(uiColor: .systemBackground))
+                                .shadow(radius: 1)
                         )
                         .onTapGesture {
                             filterItemsList[key]?.toggle()
                         }
                     }
                 }
+                .padding()
             }
         }
-        .padding(EdgeInsets(top: 0, leading: 16.0, bottom: 0, trailing: 16.0))
     }
     
     private func onFilterItemPageDismiss() {

@@ -29,7 +29,11 @@ struct FundMainItemView: View {
         }
         .fillMaxWidth()
         .padding()
-        .background(RoundedRectangle(cornerRadius: 12).foregroundColor(randomColor()))
+        .background(
+            RoundedRectangle(cornerRadius: 16.0, style: .continuous)
+                .foregroundColor(Color(uiColor: .systemBackground))
+                .shadow(radius: 1)
+        )
         .sheet(isPresented: $showDetail, content: {
             FundDetailView(fundDetailData: $detailData)
         })
