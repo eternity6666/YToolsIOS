@@ -36,38 +36,8 @@ struct FundMainView: View {
         .padding(EdgeInsets(top: 0, leading: 16.0, bottom: 0, trailing: 16.0))
         .sheet(
             isPresented: $showFilterItemsList,
-            onDismiss: {
-                currentShowFundDataList = []
-                allFundDataList.forEach { data in
-                    if (filterItemsList[data.type] == true) {
-                        currentShowFundDataList.append(data)
-                    }
-                }
-            },
-            content: {
-                let keyList = filterItemsList.map { $0.key }
-                VStack {
-                    Text("基金类型")
-                        .font(.caption)
-                    ScrollView {
-                        LazyVStack {
-                            ForEach(keyList.indices, id: \.self) { index in
-                                let key = keyList[index]
-                                HStack {
-                                    Image(systemName: filterItemsList[key] == true ? "checkmark.circle" : "circle")
-                                    Text(key)
-                                    Spacer()
-                                }
-                                .padding()
-                                .onTapGesture {
-                                    filterItemsList[key]?.toggle()
-                                }
-                            }
-                        }
-                    }
-                }
-                .padding(EdgeInsets(top: 0, leading: 16.0, bottom: 0, trailing: 16.0))
-            }
+            onDismiss: onFilterItemPageDismiss,
+            content: createFilterItemPage
         )
         .toolbar {
             if (!allFundDataList.isEmpty) {
@@ -92,23 +62,65 @@ struct FundMainView: View {
         }
     }
     
-    func requestAllFund() {
+    private func createFilterItemPage() -> some View {
+        let keyList = filterItemsList.map { $0.key }
+        return VStack {
+            HStack {
+                Text("基金类型")
+                    .font(.title)
+                
+            }
+            ScrollView {
+                LazyVStack {
+                    ForEach(keyList.indices, id: \.self) { index in
+                        let key = keyList[index]
+                        HStack {
+                            Image(systemName: filterItemsList[key] == true ? "checkmark.circle" : "circle")
+                            Text(key)
+                            Spacer()
+                        }
+                        .padding()
+                        .border(.orange)
+                        .background(
+                            RoundedRectangle(cornerRadius: 16.0, style: .continuous).foregroundColor(Color(uiColor: .systemBackground))
+                        )
+                        .onTapGesture {
+                            filterItemsList[key]?.toggle()
+                        }
+                    }
+                }
+            }
+        }
+        .padding(EdgeInsets(top: 0, leading: 16.0, bottom: 0, trailing: 16.0))
+    }
+    
+    private func onFilterItemPageDismiss() {
+        var tmpList: [FundSimpleData] = []
+        allFundDataList.forEach { data in
+            if (filterItemsList[data.type] == true) {
+                tmpList.append(data)
+            }
+        }
+        currentShowFundDataList = tmpList
+    }
+    
+    private func requestAllFund() {
         AF.request("https://api.doctorxiong.club/v1/fund/all")
             .responseDecodable(of: FundResponse<[String]>.self) { response in
                 switch response.result {
-                case .success(let fundResponse):
-                    allFundDataList = fundResponse.data.map({ dataList in
-                        FundSimpleData(dataList: dataList)
-                    }).filter({ fundSimpleData in
-                        fundSimpleData.isValid()
-                    })
-                    currentShowFundDataList = allFundDataList
-                    filterItemsList = [:]
-                    allFundDataList.forEach { data in
-                        filterItemsList[data.type] = true
-                    }
-                case .failure(let error):
-                    debugPrint(error)
+                    case .success(let fundResponse):
+                        allFundDataList = fundResponse.data.map({ dataList in
+                            FundSimpleData(dataList: dataList)
+                        }).filter({ fundSimpleData in
+                            fundSimpleData.isValid()
+                        })
+                        currentShowFundDataList = allFundDataList
+                        filterItemsList = [:]
+                        allFundDataList.forEach { data in
+                            filterItemsList[data.type] = true
+                        }
+                    case .failure(let error):
+                        debugPrint(error)
                 }
             }
     }
