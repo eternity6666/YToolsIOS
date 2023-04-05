@@ -137,4 +137,83 @@ struct FundDetailData: Codable {
         self.netWorthData = try container.decodeIfPresent([[String]].self, forKey: .netWorthData) ?? [[String]]()
         self.totalNetWorthData = try container.decodeIfPresent([[String]].self, forKey: .totalNetWorthData) ?? [[String]]()
     }
+    
+    static let testData = FundDetailData.init(
+        code: "000001",
+        name: "华夏成长混合",
+        type: "混合型-灵活",
+        netWorth: 0.933,
+        expectWorth: 0.9327,
+        totalWorth: 3.496,
+        expectGrowth: "-0.88",
+        dayGrowth: "-0.85",
+        lastWeekGrowth: "0.6472",
+        lastMonthGrowth: "-6.33",
+        lastThreeMonthsGrowth: "-7.55",
+        lastSixMonthsGrowth: "-10.21",
+        lastYearGrowth: "-8.72",
+        buyMin: "10",
+        buySourceRate: "1.50",
+        buyRate: "0.15",
+        manager: "王泽实",
+        fundScale: "31.48亿",
+        netWorthDate: "2023-04-04",
+        expectWorthDate: "2023-04-04 15:00:00",
+        netWorthData: [
+            [
+                "2001-12-18",
+                "1.0",
+                "0",
+                ""
+            ],
+            [
+                "2001-12-21",
+                "1.0",
+                "0.0",
+                ""
+            ],
+            [
+                "2001-12-28",
+                "1.0",
+                "0.0",
+                ""
+            ],
+            [
+                "2002-01-04",
+                "1.0",
+                "0.0",
+                ""
+            ],
+            [
+                "2002-01-11",
+                "1.001",
+                "0.1",
+                ""
+            ],
+            [
+                "2002-01-18",
+                "1.0",
+                "-0.0999",
+                ""
+            ],
+            [
+                "2002-01-25",
+                "1.005",
+                "0.5",
+                ""
+            ],
+            [
+                "2002-01-30",
+                "1.002",
+                "-0.2985",
+                ""
+            ],
+            [
+                "2002-01-31",
+                "1.002",
+                "0.7984",
+                ""
+            ],
+        ]
+    )
 }

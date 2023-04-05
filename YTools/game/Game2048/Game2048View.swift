@@ -31,10 +31,6 @@ struct Game2048View: View {
         8192: 0.9
     ]
     
-    init() {
-        print("初始化了")
-    }
-    
     var body: some View {
         VStack {
             HStack {

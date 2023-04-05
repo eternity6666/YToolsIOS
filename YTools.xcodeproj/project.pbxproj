@@ -14,6 +14,8 @@
 		A352161F29C1997B0013DA70 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A352161E29C1997B0013DA70 /* Extension.swift */; };
 		A35E4D1429D98F3A00BB1766 /* FundDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35E4D1329D98F3A00BB1766 /* FundDetailView.swift */; };
 		A35E4D1729D997FA00BB1766 /* FundMainItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35E4D1629D997FA00BB1766 /* FundMainItemView.swift */; };
+		A35E4D1929DC8EAF00BB1766 /* CustomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35E4D1829DC8EAF00BB1766 /* CustomData.swift */; };
+		A35E4D1B29DD020B00BB1766 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = A35E4D1A29DD020B00BB1766 /* SwiftUICharts */; };
 		A37DEF7229B98E9700A5606D /* Game2048View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DEF7129B98E9700A5606D /* Game2048View.swift */; };
 		A37DEF7429BAD4C800A5606D /* DemoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DEF7329BAD4C800A5606D /* DemoTest.swift */; };
 		A37DEF7A29BADF1700A5606D /* ClockMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DEF7929BADF1700A5606D /* ClockMainView.swift */; };
@@ -74,6 +76,7 @@
 		A352161E29C1997B0013DA70 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		A35E4D1329D98F3A00BB1766 /* FundDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundDetailView.swift; sourceTree = "<group>"; };
 		A35E4D1629D997FA00BB1766 /* FundMainItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundMainItemView.swift; sourceTree = "<group>"; };
+		A35E4D1829DC8EAF00BB1766 /* CustomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomData.swift; sourceTree = "<group>"; };
 		A37DEF7129B98E9700A5606D /* Game2048View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game2048View.swift; sourceTree = "<group>"; };
 		A37DEF7329BAD4C800A5606D /* DemoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTest.swift; sourceTree = "<group>"; };
 		A37DEF7529BAD8E400A5606D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -119,6 +122,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A34E97F029D8036900971F8C /* Alamofire in Frameworks */,
+				A35E4D1B29DD020B00BB1766 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +293,7 @@
 			children = (
 				A3DF908929473ECE00C14FF1 /* Utils.swift */,
 				A352161E29C1997B0013DA70 /* Extension.swift */,
+				A35E4D1829DC8EAF00BB1766 /* CustomData.swift */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -330,6 +335,7 @@
 			name = YTools;
 			packageProductDependencies = (
 				A34E97EF29D8036900971F8C /* Alamofire */,
+				A35E4D1A29DD020B00BB1766 /* SwiftUICharts */,
 			);
 			productName = YTools;
 			productReference = A3DF9071294092D300C14FF1 /* YTools.app */;
@@ -424,6 +430,7 @@
 				A37DEF7A29BADF1700A5606D /* ClockMainView.swift in Sources */,
 				A3181C8A29D68AA200437F4D /* FundMainView.swift in Sources */,
 				A37DEF7E29BEDE7A00A5606D /* ColorDemoView.swift in Sources */,
+				A35E4D1929DC8EAF00BB1766 /* CustomData.swift in Sources */,
 				A37DEF7429BAD4C800A5606D /* DemoTest.swift in Sources */,
 				A352161F29C1997B0013DA70 /* Extension.swift in Sources */,
 				A3C8A96929D6D55800AA3877 /* FundData.swift in Sources */,
@@ -781,6 +788,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A34E97EE29D8036900971F8C /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		A35E4D1A29DD020B00BB1766 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A34E97ED29D8027900971F8C /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

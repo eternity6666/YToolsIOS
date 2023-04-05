@@ -53,8 +53,10 @@ struct FundMainItemView: View {
             .responseDecodable(of: FundResponse<FundDetailData>.self) { response in
                 switch response.result {
                 case .success(let fundResponse):
+                    debugPrint("\(fundSimpleData.code) 加载完成 \(fundResponse.data[safe: 0] != nil)")
                     detailData = fundResponse.data[safe: 0]
                 case .failure(let error):
+                    debugPrint("\(fundSimpleData.code) 加载失败")
                     debugPrint(error)
                 }
             }
