@@ -120,7 +120,7 @@ struct FundDetailView: View {
 struct FundDetailView_Previews: PreviewProvider {
     static var previews: some View {
         FundDetailView(
-            fundDetailData: .constant(FundDetailData.testData            )
+            fundDetailData: .constant(FundDetailData.testData)
         )
     }
 }
