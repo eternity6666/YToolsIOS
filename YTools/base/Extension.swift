@@ -20,6 +20,10 @@ extension View {
     func fillMaxHeight() -> some View {
         return frame(minHeight: 0, maxHeight: .infinity)
     }
+    
+    func frameGetter(_ frame: Binding<CGRect>) -> some View {
+        modifier(FrameGetter(frame: frame))
+    }
 }
 
 extension Color {
@@ -38,5 +42,24 @@ extension Array {
             return nil
         }
         return self[index]
+    }
+}
+
+struct FrameGetter: ViewModifier {
+    @Binding var frame: CGRect
+    
+    func body(content: Content) -> some View {
+        content.background(
+            GeometryReader { proxy in
+                createView(proxy)
+            }
+        )
+    }
+    
+    private func createView(_ proxy: GeometryProxy) -> some View {
+        DispatchQueue.main.async {
+            self.frame = proxy.frame(in: .global)
+        }
+        return Rectangle().fill(Color.clear)
     }
 }

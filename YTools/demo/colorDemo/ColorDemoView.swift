@@ -10,11 +10,13 @@ import SwiftUI
 @available(iOS 15.0, *)
 struct ColorDemoView: View {
     @State private var green: Int = 0
+    @State private var rect: CGRect = .zero
     var body: some View {
         GeometryReader { geo in
             let size = min(geo.size.width, geo.size.height)
             VStack {
                 colorMainView
+                    .frameGetter($rect)
                     .padding()
                     .frame(width: size, height: size)
                 HStack {
@@ -34,6 +36,16 @@ struct ColorDemoView: View {
                 }.padding(
                     EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)
                 )
+                Button {
+                    saveAndShare(
+                        img: UIApplication.shared.windows[0].rootViewController?.view.asImage(
+                            rect: rect
+                        )
+                    )
+                } label: {
+                    Text("分享")
+                }
+
             }
             .fillMaxSize()
         }
@@ -95,15 +107,15 @@ struct ColorDemoView: View {
     
     private var colorMainView: some View {
         Canvas { context, size in
-            let ratio = 1
-            let width = Int(size.width)
-            let height = Int(size.height)
-            let significandWidth = size.width.significandWidth
-            let significandHeight = size.height.significandWidth
+            let ratio = 1.0
+            let width = size.width
+            let height = size.height
+            let significandWidth = Double(size.width.significandWidth)
+            let significandHeight = Double(size.height.significandWidth)
             let widthSize = width / significandWidth / ratio
             let heightSize = height / significandHeight / ratio
-            for i in 0 ..< widthSize {
-                for j in 0 ..< heightSize {
+            for i in stride(from: 0, through: widthSize, by: 0.5) {
+                for j in stride(from: 0, through: heightSize, by: 0.5) {
                     let h = Double(256 * i) / Double(widthSize)
                     let l = Double(256 * j) / Double(heightSize)
                     let r = h
@@ -127,6 +139,30 @@ struct ColorDemoView: View {
                     )
                 }
             }
+        }
+    }
+    
+    private func saveAndShare(img: UIImage?) {
+        if let img = img {
+            let fileManager = FileManager.default
+            let rootPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString
+            let currentTime = "\(Date.now.formatted(date: .numeric, time: .standard))".filter({ $0.isCased || $0.isNumber })
+            print(currentTime)
+            let filePath = "\(rootPath)/colorDemo-\(currentTime).png"
+            let imageData = img.pngData()
+            fileManager.createFile(atPath: filePath, contents: imageData, attributes: nil)
+            let url: URL = URL.init(fileURLWithPath: filePath)
+            let av = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+            UIApplication.shared.windows.first?.rootViewController!.present(av, animated: true, completion: nil)
+        }
+    }
+}
+
+extension UIView {
+    func asImage(rect: CGRect) -> UIImage {
+        let renderer = UIGraphicsImageRenderer(bounds: rect)
+        return renderer.image { rendererContext in
+            layer.render(in: rendererContext.cgContext)
         }
     }
 }
