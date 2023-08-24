@@ -60,6 +60,7 @@ struct ColorSelectorDemo: View {
     private func colorSelector(dRed: Double, dGreen: Double, dBlue: Double) -> some View {
         progressView(
             currentLength: $red,
+            buttonColor: .init(red: 1.0, green: 0.0, blue: 0.0),
             colors: [
                 .init(red: 0.0, green: dGreen, blue: dBlue),
                 .init(red: 1.0, green: dGreen, blue: dBlue)
@@ -70,6 +71,7 @@ struct ColorSelectorDemo: View {
         }
         progressView(
             currentLength: $green,
+            buttonColor: .init(red: 0.0, green: 1.0, blue: 0.0),
             colors: [
                 .init(red: dRed, green: 0.0, blue: dBlue),
                 .init(red: dRed, green: 1.0, blue: dBlue)
@@ -80,6 +82,7 @@ struct ColorSelectorDemo: View {
         }
         progressView(
             currentLength: $blue,
+            buttonColor: .init(red: 0.0, green: 0.0, blue: 1.0),
             colors: [
                 .init(red: dRed, green: dGreen, blue: 0.0),
                 .init(red: dRed, green: dGreen, blue: 1.0)
@@ -93,6 +96,7 @@ struct ColorSelectorDemo: View {
     @ViewBuilder
     private func progressView(
         currentLength: Binding<Double>,
+        buttonColor: Color = Color.white,
         colors: [Color],
         leading: () -> some View = { EmptyView() }
     ) -> some View {
@@ -101,6 +105,7 @@ struct ColorSelectorDemo: View {
             CustomSlider(
                 value: currentLength,
                 in: 0...256,
+                buttonColor: buttonColor,
                 background: AnyShapeStyle(
                     .linearGradient(
                         colors: colors,

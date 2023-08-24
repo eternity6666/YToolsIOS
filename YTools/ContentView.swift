@@ -32,6 +32,11 @@ struct ContentView: View {
                 } label: {
                     ContentItemView(title: "Fund")
                 }
+                NavigationLink {
+                    LazyView(ColorSelectorDemo())
+                } label: {
+                    ContentItemView(title: "Color Selector Demo")
+                }
                 if #available(iOS 15.0, *) {
                     NavigationLink {
                         LazyView(ColorDemoView())

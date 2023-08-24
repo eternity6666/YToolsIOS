@@ -27,8 +27,8 @@ struct CustomSlider: View {
                         
                     }
                 
+                let viewWidth = geo.size.width - padding * 2 - thumbSize
                 HStack {
-                    let viewWidth = geo.size.width - padding * 2 - thumbSize
                     Circle()
                         .foregroundColor(buttonColor)
                         .frame(width: thumbSize, height: thumbSize)
@@ -42,7 +42,7 @@ struct CustomSlider: View {
                                             Double(self.in.lowerBound),
                                             min(
                                                 Double(self.in.upperBound),
-                                                Double(self.in.lowerBound) + Double(self.in.count) * v.location.x / (geo.size.width - padding * 2 - thumbSize)
+                                                Double(self.in.lowerBound) + Double(self.in.count) * v.location.x / viewWidth
                                             )
                                         )
                                     }
