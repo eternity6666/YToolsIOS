@@ -60,37 +60,37 @@ struct ColorSelectorDemo: View {
     private func colorSelector(dRed: Double, dGreen: Double, dBlue: Double) -> some View {
         progressView(
             currentLength: $red,
-            buttonColor: .init(red: 1.0, green: 0.0, blue: 0.0),
             colors: [
                 .init(red: 0.0, green: dGreen, blue: dBlue),
                 .init(red: 1.0, green: dGreen, blue: dBlue)
-            ]
-        ) {
-            Text("R")
-                .bold()
-        }
+            ],
+            leading: {
+                Text("R")
+                    .bold()
+            }
+        )
         progressView(
             currentLength: $green,
-            buttonColor: .init(red: 0.0, green: 1.0, blue: 0.0),
             colors: [
                 .init(red: dRed, green: 0.0, blue: dBlue),
                 .init(red: dRed, green: 1.0, blue: dBlue)
-            ]
-        ) {
-            Text("G")
-                .bold()
-        }
+            ],
+            leading: {
+                Text("G")
+                    .bold()
+            }
+        )
         progressView(
             currentLength: $blue,
-            buttonColor: .init(red: 0.0, green: 0.0, blue: 1.0),
             colors: [
                 .init(red: dRed, green: dGreen, blue: 0.0),
                 .init(red: dRed, green: dGreen, blue: 1.0)
-            ]
-        ) {
-            Text("B")
-                .bold()
-        }
+            ],
+            leading: {
+                Text("B")
+                    .bold()
+            }
+        )
     }
     
     @ViewBuilder
@@ -98,7 +98,8 @@ struct ColorSelectorDemo: View {
         currentLength: Binding<Double>,
         buttonColor: Color = Color.white,
         colors: [Color],
-        leading: () -> some View = { EmptyView() }
+        leading: () -> some View = { EmptyView() },
+        trailing: () -> some View = { EmptyView() }
     ) -> some View {
         HStack {
             leading()
@@ -115,6 +116,7 @@ struct ColorSelectorDemo: View {
                 )
             )
             .frame(height: 30)
+            trailing()
         }
         .padding(.horizontal, 8)
     }
