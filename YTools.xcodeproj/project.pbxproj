@@ -31,6 +31,9 @@
 		A37DEFB629CC7C4000A5606D /* YWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A37DEFA129CC7C3E00A5606D /* YWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A37DEFBD29CC85D100A5606D /* YWidgetsAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DEFBC29CC85D100A5606D /* YWidgetsAttributes.swift */; };
 		A37DEFBE29CC85D100A5606D /* YWidgetsAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DEFBC29CC85D100A5606D /* YWidgetsAttributes.swift */; };
+		A390069F2A95E9F2002C42B9 /* ColorSelectorDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A390069E2A95E9F2002C42B9 /* ColorSelectorDemo.swift */; };
+		A39006A12A95F3A3002C42B9 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39006A02A95F3A3002C42B9 /* CustomSlider.swift */; };
+		A39006A22A95F3A3002C42B9 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39006A02A95F3A3002C42B9 /* CustomSlider.swift */; };
 		A3C8A96929D6D55800AA3877 /* FundData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C8A96829D6D55800AA3877 /* FundData.swift */; };
 		A3C8A96C29DBC5B400AA3877 /* ClockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C8A96A29DBC5B400AA3877 /* ClockData.swift */; };
 		A3C8A96D29DBC5B400AA3877 /* ClockBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C8A96B29DBC5B400AA3877 /* ClockBoardView.swift */; };
@@ -93,6 +96,8 @@
 		A37DEFB129CC7C4000A5606D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A37DEFBC29CC85D100A5606D /* YWidgetsAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YWidgetsAttributes.swift; sourceTree = "<group>"; };
 		A37DEFBF29CC8B7300A5606D /* YWidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YWidgetsExtension.entitlements; sourceTree = "<group>"; };
+		A390069E2A95E9F2002C42B9 /* ColorSelectorDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelectorDemo.swift; sourceTree = "<group>"; };
+		A39006A02A95F3A3002C42B9 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		A3C8A96829D6D55800AA3877 /* FundData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundData.swift; sourceTree = "<group>"; };
 		A3C8A96A29DBC5B400AA3877 /* ClockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockData.swift; sourceTree = "<group>"; };
 		A3C8A96B29DBC5B400AA3877 /* ClockBoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockBoardView.swift; sourceTree = "<group>"; };
@@ -189,6 +194,7 @@
 		A37DEF7B29BED4F400A5606D /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				A390069D2A95E9CF002C42B9 /* colorSelectorDemo */,
 				A37DEF7C29BED4FC00A5606D /* colorDemo */,
 			);
 			path = demo;
@@ -223,6 +229,14 @@
 				A37DEFB129CC7C4000A5606D /* Info.plist */,
 			);
 			path = YWidgets;
+			sourceTree = "<group>";
+		};
+		A390069D2A95E9CF002C42B9 /* colorSelectorDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A390069E2A95E9F2002C42B9 /* ColorSelectorDemo.swift */,
+			);
+			path = colorSelectorDemo;
 			sourceTree = "<group>";
 		};
 		A3C8A96729D6D54C00AA3877 /* data */ = {
@@ -294,6 +308,7 @@
 				A3DF908929473ECE00C14FF1 /* Utils.swift */,
 				A352161E29C1997B0013DA70 /* Extension.swift */,
 				A35E4D1829DC8EAF00BB1766 /* CustomData.swift */,
+				A39006A02A95F3A3002C42B9 /* CustomSlider.swift */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -407,6 +422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A39006A22A95F3A3002C42B9 /* CustomSlider.swift in Sources */,
 				A3C8A96F29DBC60400AA3877 /* ClockBoardView.swift in Sources */,
 				A3C8A96E29DBC5FC00AA3877 /* ClockData.swift in Sources */,
 				A37DEFAB29CC7C3E00A5606D /* YWidgetsLiveActivity.swift in Sources */,
@@ -422,6 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3C8A96D29DBC5B400AA3877 /* ClockBoardView.swift in Sources */,
+				A39006A12A95F3A3002C42B9 /* CustomSlider.swift in Sources */,
 				A3DF908429420A6E00C14FF1 /* WeatherKitView.swift in Sources */,
 				A35E4D1729D997FA00BB1766 /* FundMainItemView.swift in Sources */,
 				A37DEF7229B98E9700A5606D /* Game2048View.swift in Sources */,
@@ -440,6 +457,7 @@
 				A3DF908829473E6F00C14FF1 /* NineMainView.swift in Sources */,
 				A37DEFB329CC7C4000A5606D /* YWidgets.intentdefinition in Sources */,
 				1CF031AD294616B800F40D2B /* SortPicView.swift in Sources */,
+				A390069F2A95E9F2002C42B9 /* ColorSelectorDemo.swift in Sources */,
 				A35E4D1429D98F3A00BB1766 /* FundDetailView.swift in Sources */,
 				A3DF9075294092D300C14FF1 /* YToolsApp.swift in Sources */,
 			);
@@ -669,7 +687,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
@@ -715,7 +733,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
