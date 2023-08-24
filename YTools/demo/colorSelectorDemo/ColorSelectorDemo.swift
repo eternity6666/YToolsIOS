@@ -18,9 +18,8 @@ struct ColorSelectorDemo: View {
             let dBlue = blue / 256.0
             if (geo.size.width > geo.size.height) {
                 HStack {
-                    VStack {
-                        colorMainView(dRed: dRed, dGreen: dGreen, dBlue: dBlue)
-                    }
+                    colorMainView(dRed: dRed, dGreen: dGreen, dBlue: dBlue)
+                        .frame(height: geo.size.height)
                     VStack {
                         colorSelector(dRed: dRed, dGreen: dGreen, dBlue: dBlue)
                     }
@@ -65,30 +64,40 @@ struct ColorSelectorDemo: View {
                 .init(red: 0.0, green: dGreen, blue: dBlue),
                 .init(red: 1.0, green: dGreen, blue: dBlue)
             ]
-        )
+        ) {
+            Text("R")
+                .bold()
+        }
         progressView(
             currentLength: $green,
             colors: [
                 .init(red: dRed, green: 0.0, blue: dBlue),
                 .init(red: dRed, green: 1.0, blue: dBlue)
             ]
-        )
+        ) {
+            Text("G")
+                .bold()
+        }
         progressView(
             currentLength: $blue,
             colors: [
                 .init(red: dRed, green: dGreen, blue: 0.0),
                 .init(red: dRed, green: dGreen, blue: 1.0)
             ]
-        )
+        ) {
+            Text("B")
+                .bold()
+        }
     }
     
     @ViewBuilder
     private func progressView(
         currentLength: Binding<Double>,
-        colors: [Color]
+        colors: [Color],
+        leading: () -> some View = { EmptyView() }
     ) -> some View {
         HStack {
-            Text("0")
+            leading()
             CustomSlider(
                 value: currentLength,
                 in: 0...256,
@@ -101,7 +110,6 @@ struct ColorSelectorDemo: View {
                 )
             )
             .frame(height: 30)
-            Text("256")
         }
         .padding(.horizontal, 8)
     }
