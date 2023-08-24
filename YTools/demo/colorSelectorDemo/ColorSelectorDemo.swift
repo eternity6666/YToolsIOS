@@ -11,6 +11,8 @@ struct ColorSelectorDemo: View {
     @State private var red = 230.0
     @State private var green = 217.0
     @State private var blue = 204.0
+    @State private var rect: CGRect = .zero
+    
     var body: some View {
         GeometryReader { geo in
             let dRed = red / 256.0
@@ -45,6 +47,7 @@ struct ColorSelectorDemo: View {
         Rectangle()
             .fill(Color.init(red: dRed, green: dGreen, blue: dBlue))
             .aspectRatio(1, contentMode: .fit)
+            .frameGetter($rect)
             .padding(.all, 2)
             .overlay(alignment: .bottom) {
                 let count = (dRed < 0.5 ? 1 : 0) + (dGreen < 0.5 ? 1 : 0) + (dBlue < 0.5 ? 1 : 0)
@@ -53,6 +56,11 @@ struct ColorSelectorDemo: View {
                     .bold()
                     .foregroundColor(fontColor)
                     .padding()
+            }
+            .onLongPressGesture {
+                saveAndShare(
+                    img: UIApplication.shared.windows[0].rootViewController?.view.asImage(rect: rect)
+                )
             }
     }
     
