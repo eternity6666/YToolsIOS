@@ -34,6 +34,7 @@
 		A390069F2A95E9F2002C42B9 /* ColorSelectorDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A390069E2A95E9F2002C42B9 /* ColorSelectorDemo.swift */; };
 		A39006A12A95F3A3002C42B9 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39006A02A95F3A3002C42B9 /* CustomSlider.swift */; };
 		A39006A22A95F3A3002C42B9 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39006A02A95F3A3002C42B9 /* CustomSlider.swift */; };
+		A3BED4842B472AAD00F3A9A0 /* AppStoreIconPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BED4832B472AAD00F3A9A0 /* AppStoreIconPage.swift */; };
 		A3C8A96929D6D55800AA3877 /* FundData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C8A96829D6D55800AA3877 /* FundData.swift */; };
 		A3C8A96C29DBC5B400AA3877 /* ClockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C8A96A29DBC5B400AA3877 /* ClockData.swift */; };
 		A3C8A96D29DBC5B400AA3877 /* ClockBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C8A96B29DBC5B400AA3877 /* ClockBoardView.swift */; };
@@ -98,6 +99,7 @@
 		A37DEFBF29CC8B7300A5606D /* YWidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YWidgetsExtension.entitlements; sourceTree = "<group>"; };
 		A390069E2A95E9F2002C42B9 /* ColorSelectorDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelectorDemo.swift; sourceTree = "<group>"; };
 		A39006A02A95F3A3002C42B9 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
+		A3BED4832B472AAD00F3A9A0 /* AppStoreIconPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreIconPage.swift; sourceTree = "<group>"; };
 		A3C8A96829D6D55800AA3877 /* FundData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundData.swift; sourceTree = "<group>"; };
 		A3C8A96A29DBC5B400AA3877 /* ClockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockData.swift; sourceTree = "<group>"; };
 		A3C8A96B29DBC5B400AA3877 /* ClockBoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockBoardView.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		A37DEF7829BADEF200A5606D /* application */ = {
 			isa = PBXGroup;
 			children = (
+				A3BED4822B472A1500F3A9A0 /* AppStoreIcon */,
 				A3181C8829D68A8800437F4D /* fund */,
 				1CF031A92946167200F40D2B /* sort */,
 				A3DF908529473E4C00C14FF1 /* nine */,
@@ -237,6 +240,14 @@
 				A390069E2A95E9F2002C42B9 /* ColorSelectorDemo.swift */,
 			);
 			path = colorSelectorDemo;
+			sourceTree = "<group>";
+		};
+		A3BED4822B472A1500F3A9A0 /* AppStoreIcon */ = {
+			isa = PBXGroup;
+			children = (
+				A3BED4832B472AAD00F3A9A0 /* AppStoreIconPage.swift */,
+			);
+			path = AppStoreIcon;
 			sourceTree = "<group>";
 		};
 		A3C8A96729D6D54C00AA3877 /* data */ = {
@@ -455,6 +466,7 @@
 				A3C8A96C29DBC5B400AA3877 /* ClockData.swift in Sources */,
 				A3DF908A29473ECE00C14FF1 /* Utils.swift in Sources */,
 				A3DF908829473E6F00C14FF1 /* NineMainView.swift in Sources */,
+				A3BED4842B472AAD00F3A9A0 /* AppStoreIconPage.swift in Sources */,
 				A37DEFB329CC7C4000A5606D /* YWidgets.intentdefinition in Sources */,
 				1CF031AD294616B800F40D2B /* SortPicView.swift in Sources */,
 				A390069F2A95E9F2002C42B9 /* ColorSelectorDemo.swift in Sources */,

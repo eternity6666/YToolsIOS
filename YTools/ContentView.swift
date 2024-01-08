@@ -13,6 +13,11 @@ struct ContentView: View {
         ScrollView {
             VStack {
                 NavigationLink {
+                    LazyView(AppStoreIconPage())
+                } label: {
+                    ContentItemView(title: "获取应用图标")
+                }
+                NavigationLink {
                     LazyView(NineMainView())
                 } label: {
                     ContentItemView(title: "九格")
